@@ -3,6 +3,8 @@
 
   <remote  name="aosp"
            fetch="git://github.com/android/" />
+  <remote  name="aosp2"
+           fetch="https://android.googlesource.com/" />
   <remote name="b2g"
           fetch="git://github.com/mozilla-b2g/" />
   <default revision="master"
@@ -13,82 +15,82 @@
   <project path="build" name="platform_build" remote="b2g">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="abi/cpp" name="platform/abi/cpp" />
+  <project path="abi/cpp" name="platform/abi/cpp" remote="aosp2" />
   <project path="gonk-misc" name="gonk-misc" remote="b2g" />
-  <project path="bionic" name="platform/bionic" />
-  <project path="bootable/recovery" name="platform/bootable/recovery" />
+  <project path="bionic" name="platform_bionic" />
+  <project path="bootable/recovery" name="platform/bootable/recovery" remote="aosp2" />
   <project path="dalvik" name="fake-dalvik" remote="b2g" />
   <!--<project path="development" name="platform/development" />-->
-  <project path="device/common" name="device/common" />
+  <project path="device/common" name="device/common" remote="aosp2" />
   <!--<project path="device/generic/goldfish" name="device/generic/goldfish" />-->
-  <project path="device/sample" name="device/sample" />
+  <project path="device/sample" name="device/sample" remote="aosp2" />
   <project path="device/samsung/crespo" name="android-device-crespo" remote="b2g" />
-  <project path="external/apache-http" name="platform/external/apache-http" />
-  <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" />
-  <project path="external/bluetooth/glib" name="platform/external/bluetooth/glib" />
-  <project path="external/bsdiff" name="platform/external/bsdiff" />
+  <project path="external/apache-http" name="platform_external_apache-http" />
+  <project path="external/bluetooth/bluez" name="platform_external_bluez" />
+  <project path="external/bluetooth/glib" name="platform/external/bluetooth/glib" remote="aosp2" />
+  <project path="external/bsdiff" name="platform/external/bsdiff" remote="aosp2" />
   <project path="external/busybox" name="busybox" remote="b2g" />
-  <project path="external/bzip2" name="platform/external/bzip2" />
-  <project path="external/chromium" name="platform/external/chromium" />
-  <project path="external/dbus" name="platform/external/dbus" />
-  <project path="external/dhcpcd" name="platform/external/dhcpcd" />
-  <project path="external/expat" name="platform/external/expat" />
-  <project path="external/fdlibm" name="platform/external/fdlibm" />
-  <project path="external/flac" name="platform/external/flac" />
-  <project path="external/freetype" name="platform/external/freetype" />
-  <project path="external/giflib" name="platform/external/giflib" />
-  <project path="external/gtest" name="platform/external/gtest" />
-  <project path="external/harfbuzz" name="platform/external/harfbuzz" />
-  <project path="external/icu4c" name="platform/external/icu4c" />
-  <project path="external/jhead" name="platform/external/jhead" />
-  <project path="external/jpeg" name="platform/external/jpeg" />
-  <project path="external/libgsm" name="platform/external/libgsm" />
-  <project path="external/liblzf" name="platform/external/liblzf" />
-  <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" />
-  <project path="external/libnl-headers" name="platform/external/libnl-headers" />
-  <project path="external/libphonenumber" name="platform/external/libphonenumber" />
-  <project path="external/libpng" name="platform/external/libpng" />
-  <project path="external/libvpx" name="platform/external/libvpx" />
-  <project path="external/mksh" name="platform/external/mksh" />
-  <project path="external/openssl" name="platform/external/openssl" />
-  <project path="external/protobuf" name="platform/external/protobuf" />
-  <project path="external/safe-iop" name="platform/external/safe-iop" />
-  <project path="external/skia" name="platform/external/skia" />
-  <project path="external/sonivox" name="platform/external/sonivox" />
-  <project path="external/speex" name="platform/external/speex" />
-  <project path="external/sqlite" name="platform/external/sqlite" />
-  <project path="external/stlport" name="platform/external/stlport" />
-  <project path="external/tagsoup" name="platform/external/tagsoup" />
-  <project path="external/tinyalsa" name="platform/external/tinyalsa" />
-  <project path="external/tremolo" name="platform/external/tremolo" />
-  <project path="external/webp" name="platform/external/webp" />
-  <project path="external/webrtc" name="platform/external/webrtc" />
-  <project path="external/wpa_supplicant" name="platform/external/wpa_supplicant" />
-  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" />
-  <project path="external/zlib" name="platform/external/zlib" />
-  <project path="frameworks/base" name="platform/frameworks/base" />
-  <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
-  <project path="frameworks/support" name="platform/frameworks/support" />
-  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
-  <project path="hardware/libhardware" name="platform/hardware/libhardware" />
-  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" />
-  <project path="hardware/ril" name="platform/hardware/ril" />
-  <project path="libcore" name="platform/libcore" />
-  <project path="ndk" name="platform/ndk" />
-  <project path="prebuilt" name="platform/prebuilt" />
+  <project path="external/bzip2" name="platform/external/bzip2" remote="aosp2" />
+  <project path="external/chromium" name="platform/external/chromium" remote="aosp2" />
+  <project path="external/dbus" name="platform_external_dbus" />
+  <project path="external/dhcpcd" name="platform_external_dhcpcd" />
+  <project path="external/expat" name="platform_external_expat" />
+  <project path="external/fdlibm" name="platform_external_fdlibm" />
+  <project path="external/flac" name="platform/external/flac" remote="aosp2" />
+  <project path="external/freetype" name="platform_external_freetype" />
+  <project path="external/giflib" name="platform_external_giflib" />
+  <project path="external/gtest" name="platform/external/gtest" remote="aosp2" />
+  <project path="external/harfbuzz" name="platform/external/harfbuzz" remote="aosp2" />
+  <project path="external/icu4c" name="platform_external_icu4c" />
+  <project path="external/jhead" name="platform_external_jhead" />
+  <project path="external/jpeg" name="platform_external_jpeg" />
+  <project path="external/libgsm" name="platform/external/libgsm" remote="aosp2" />
+  <project path="external/liblzf" name="platform/external/liblzf" remote="aosp2" />
+  <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" remote="aosp2" />
+  <project path="external/libnl-headers" name="platform/external/libnl-headers" remote="aosp2" />
+  <project path="external/libphonenumber" name="platform/external/libphonenumber" remote="aosp2" />
+  <project path="external/libpng" name="platform_external_libpng" />
+  <project path="external/libvpx" name="platform/external/libvpx" remote="aosp2" />
+  <project path="external/mksh" name="platform/external/mksh" remote="aosp2" />
+  <project path="external/openssl" name="platform_external_openssl" />
+  <project path="external/protobuf" name="platform_external_protobuf" />
+  <project path="external/safe-iop" name="platform_external_safe-iop" />
+  <project path="external/skia" name="platform_external_skia" />
+  <project path="external/sonivox" name="platform_external_sonivox" />
+  <project path="external/speex" name="platform/external/speex" remote="aosp2" />
+  <project path="external/sqlite" name="platform_external_sqlite" />
+  <project path="external/stlport" name="platform/external/stlport" remote="aosp2" />
+  <project path="external/tagsoup" name="platform_external_tagsoup" />
+  <project path="external/tinyalsa" name="platform/external/tinyalsa" remote="aosp2" />
+  <project path="external/tremolo" name="platform/external/tremolo" remote="aosp2" />
+  <project path="external/webp" name="platform/external/webp" remote="aosp2" />
+  <project path="external/webrtc" name="platform/external/webrtc" remote="aosp2" />
+  <project path="external/wpa_supplicant" name="platform_external_wpa_supplicant" />
+  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" remote="aosp2" />
+  <project path="external/zlib" name="platform_external_zlib" />
+  <project path="frameworks/base" name="platform_frameworks_base" />
+  <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" remote="aosp2" />
+  <project path="frameworks/support" name="platform/frameworks/support" remote="aosp2" />
+  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" remote="aosp2" />
+  <project path="hardware/libhardware" name="platform_hardware_libhardware" />
+  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" remote="aosp2" />
+  <project path="hardware/ril" name="platform_hardware_ril" />
+  <project path="libcore" name="platform/libcore" remote="aosp2" />
+  <project path="ndk" name="platform/ndk" remote="aosp2" />
+  <project path="prebuilt" name="platform_prebuilt" />
   <project path="rilproxy" name="rilproxy" remote="b2g" />
-  <project path="system/bluetooth" name="platform/system/bluetooth" />
+  <project path="system/bluetooth" name="platform_system_bluetooth" />
   <project path="system/core" name="platform_system_core" remote="b2g" revision="b2g" />
-  <project path="system/extras" name="platform/system/extras" />
-  <project path="system/media" name="platform/system/media" />
-  <project path="system/netd" name="platform/system/netd" />
-  <project path="system/vold" name="platform/system/vold" />
+  <project path="system/extras" name="platform/system/extras" remote="aosp2" />
+  <project path="system/media" name="platform/system/media" remote="aosp2" />
+  <project path="system/netd" name="platform/system/netd" remote="aosp2" />
+  <project path="system/vold" name="platform/system/vold" remote="aosp2" />
 
   <!-- Galaxy Nexus specific things -->
-  <project path="device/samsung/maguro" name="device/samsung/maguro" />
+  <!--<project path="device/samsung/maguro" name="device/samsung/maguro" />
   <project path="device/samsung/tuna" name="android-device-tuna" remote="b2g" />
   <project path="device/ti/panda" name="device/ti/panda" />
   <project path="hardware/invensense" name="platform/hardware/invensense" />
-  <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" />
+  <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" />-->
 
 </manifest>
